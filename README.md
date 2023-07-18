@@ -34,21 +34,22 @@ NORD_PASSSWORD=xxxxxxxxxxx
 ```
 
 ```python
-from njord import VPN
+import njord
 
 # Using .env file or os env
-vpn = VPN()
+client = njord.Client()
 
 # Explicit
-vpn = VPN(user="xxxxxxxx", password="xxxxxxxxx")
+client = njord.Client(user="xxxxxxxx", password="xxxxxxxxx")
 ```
 
 #### Connecting & Disconnecting
 ``` python
-from njord import VPN
-vpn = VPN()
-vpn.connect()
-vpn.protected()
+import njord
+client = njord.Client()
+client.connect()
+>> Connected to us10086.nordvpn.com
+client.protected()
 >> True
 vpn.disconnect()
 vpn.protected()
